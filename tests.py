@@ -74,3 +74,15 @@ class TestBooksCollector:
         favorities_books = collector.get_list_of_favorites_books()
         assert favorities_books == ["Звездные войны", "Властелин колец"]
 
+    def test_get_books_genre_returns_books_dictionary(self):
+        collector = BooksCollector()
+        collector.add_new_book("Оно")
+        collector.add_new_book("Чук и Гек")
+        collector.set_book_genre("Оно",'Ужасы')
+        collector.set_book_genre("Чук и Гек", 'Мультфильмы')
+        assert collector.get_books_genre() == {"Оно":'Ужасы', "Чук и Гек":'Мультфильмы'}
+
+    def test_get_books_genre_returns_book_dictionary_with_no_genre(self):
+        collector = BooksCollector()
+        collector.add_new_book("Оно")        
+        assert collector.get_books_genre() == {"Оно":''}

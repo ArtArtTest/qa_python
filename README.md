@@ -9,3 +9,5 @@
 #7) def test_add_book_in_favorites_adds_book - проверяет, что add_book_in_favorites добавляет книгу в избранное 
 #8) def test_delete_book_from_favorites_delete_book - проверяет, что delete_book_from_favorites удаляет книгу из избранного, если она там есть
 #9) def test_get_list_of_favorities_books_returns_list_of_favorities_books - проверяет, что get_list_of_favorites_books выдает список избранный книг
+# NEW 10) def test_get_books_genre_returns_books_dictionary - (позитивная проверка для get_books_genre) проверяет, что get_books_genre выдает словарь books_genre
+# NEW 11) def test_get_books_genre_returns_book_dictionary_with_no_genre - (позитивная проверка для get_books_genre) проверяет, что get_books_genre выдает словарь books_genre, если у книги не задан genre 
